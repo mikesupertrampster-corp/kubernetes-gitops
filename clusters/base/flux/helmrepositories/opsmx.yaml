@@ -1,0 +1,9 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRepository
+metadata:
+  name: opsmx
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://helmcharts.opsmx.com
