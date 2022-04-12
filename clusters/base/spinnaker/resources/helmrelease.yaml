@@ -6,3 +6,7 @@ metadata:
   namespace: spinnaker
 spec:
   helmVersion: v3
+  chart:
+    name: spinnaker
+    repository: https://helmcharts.opsmx.com
+    version: 2.2.7
