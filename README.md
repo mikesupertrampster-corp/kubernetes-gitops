@@ -1,2 +1,3 @@
-# kubernetes-gitops
+# Kubernetes GitOps
+
 Gitops repository for kubernetes
