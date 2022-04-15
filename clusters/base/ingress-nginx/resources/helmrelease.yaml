@@ -8,9 +8,13 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: ingress-nginx
-      version: 1.12.4
+      chart: nginx-stable
+      version: 4.0.19
       sourceRef:
         kind: HelmRepository
         name: nginx-stable
         namespace: flux-system
+    values:
+      controller:
+        service:
+          type: NodePort
