@@ -8,27 +8,27 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: nginx-stable
+      chart: ingress-nginx
       version: 4.0.19
       sourceRef:
         kind: HelmRepository
         name: nginx-stable
         namespace: flux-system
-    values:
-      controller:
-        service:
-          type: NodePort
-          ports:
-            http: 80
-            https: 443
-          targetPorts:
-            http: 8080
-            https: 8443
-        extraArgs:
-          http-port: 8080
-          https-port: 8443
-        containerPort:
+  values:
+    controller:
+      service:
+        type: NodePort
+        ports:
+          http: 80
+          https: 443
+        targetPorts:
           http: 8080
           https: 8443
-        image:
-          allowPrivilegeEscalation: false
+      extraArgs:
+        http-port: 8080
+        https-port: 8443
+      containerPort:
+        http: 8080
+        https: 8443
+      image:
+        allowPrivilegeEscalation: false
