@@ -5,6 +5,11 @@ metadata:
   namespace: ingress-nginx
 spec:
   type: NodePort
+  defaultBackend:
+    resource:
+      apiGroup: k8s.example.com
+      kind: StorageBucket
+      name: static-assets
   ports:
     - name: http
       port: 80
