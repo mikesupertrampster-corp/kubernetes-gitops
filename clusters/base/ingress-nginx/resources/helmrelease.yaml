@@ -21,3 +21,5 @@ spec:
         nodePorts:
           http: 30080
           https: 30081
+          tcp:
+            "10254": "32254"
