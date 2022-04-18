@@ -12,6 +12,14 @@ patches:
         path: /spec/rules/0/host
         value: hello-world.dev.mikesupertrampster.com
   - target:
+      version: v1
+      kind: Ingress
+      name: kiali
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: kiali.dev.mikesupertrampster.com
+  - target:
       version: v2beta1
       kind: HelmRelease
       name: datadog
