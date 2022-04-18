@@ -11,3 +11,11 @@ patches:
       - op: replace
         path: /spec/rules/0/host
         value: hello-world.dev.mikesupertrampster.com
+  - target:
+      version: v2beta1
+      kind: HelmRelease
+      name: datadog
+    patch: |
+      - op: replace
+        path: /spec/values/datadog/clusterName
+        value: dev
