@@ -3,7 +3,8 @@ kind: Kustomization
 resources:
   - datadog
   - flux
-  - hello-world
   - ingress-nginx
   - istio
   - kiali
+  - demos/hello-world
+  - demos/travel-app
