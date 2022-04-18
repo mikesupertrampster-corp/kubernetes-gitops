@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - helm-repositories/autoscaler.yaml
   - helm-repositories/datadog.yaml
   - helm-repositories/istio.yaml
   - helm-repositories/kiali.yaml
