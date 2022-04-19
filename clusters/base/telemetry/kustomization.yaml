@@ -4,3 +4,4 @@ resources:
   - resources/grafana.yaml
   - resources/namespace.yaml
   - resources/ingresses.yaml
+  - resources/secrets.yaml

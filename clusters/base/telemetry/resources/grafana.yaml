@@ -14,3 +14,6 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
+  values:
+    admin:
+      existingSecret: grafana
