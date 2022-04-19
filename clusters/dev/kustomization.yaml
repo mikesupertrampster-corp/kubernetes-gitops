@@ -22,6 +22,22 @@ patches:
         path: /spec/rules/0/host
         value: kiali.dev.mikesupertrampster.com
   - target:
+      version: v1
+      kind: Ingress
+      name: alertmanager
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: alertmanager.dev.mikesupertrampster.com
+  - target:
+      version: v1
+      kind: Ingress
+      name: prometheus
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: prometheus.dev.mikesupertrampster.com
+  - target:
       version: v2beta1
       kind: HelmRelease
       name: datadog
