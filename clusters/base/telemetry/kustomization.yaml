@@ -6,4 +6,3 @@ resources:
   - resources/ingresses.yaml
   - resources/jaeger.yaml
   - resources/loki.yaml
-  - resources/secrets.yaml

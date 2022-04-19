@@ -15,5 +15,18 @@ spec:
         name: grafana
         namespace: flux-system
   values:
-    admin:
-      existingSecret: grafana
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+          - name: Prometheus
+            type: prometheus
+            access: proxy
+            isDefault: true
+            url: http://prometheus-server.prometheus.svc.cluster.local
+    grafana.ini:
+      analytics:
+        check_for_updates: true
+      auth.anonymous:
+        enabled: true
+        org_role: Admin
