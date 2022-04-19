@@ -4,4 +4,6 @@ resources:
   - resources/grafana.yaml
   - resources/namespace.yaml
   - resources/ingresses.yaml
+  - resources/jaeger.yaml
+  - resources/loki.yaml
   - resources/secrets.yaml
