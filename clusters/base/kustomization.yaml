@@ -7,4 +7,5 @@ resources:
   - ingress-nginx
   - istio
   - kiali
+  - prometheus
   - demos/hello-world
