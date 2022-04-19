@@ -13,4 +13,7 @@ spec:
         kind: HelmRepository
         name: kiali
         namespace: flux-system
-
+  values:
+    external_services:
+      prometheus:
+        url: "http://prometheus-server.prometheus.svc.cluster.local/"
