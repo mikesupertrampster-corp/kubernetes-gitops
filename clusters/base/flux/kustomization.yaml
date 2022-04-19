@@ -3,7 +3,9 @@ kind: Kustomization
 resources:
   - helm-repositories/autoscaler.yaml
   - helm-repositories/datadog.yaml
+  - helm-repositories/graphana.yaml
   - helm-repositories/istio.yaml
+  - helm-repositories/jaeger.yaml
   - helm-repositories/kiali.yaml
   - helm-repositories/nginx.yaml
   - helm-repositories/opsmx.yaml
