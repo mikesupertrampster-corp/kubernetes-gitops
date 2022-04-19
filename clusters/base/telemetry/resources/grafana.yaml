@@ -12,7 +12,7 @@ spec:
       version: 6.26.3
       sourceRef:
         kind: HelmRepository
-        name: prometheus
+        name: grafana
         namespace: flux-system
   values:
     ingress:
