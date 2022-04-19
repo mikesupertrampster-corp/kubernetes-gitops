@@ -14,9 +14,3 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
-  values:
-    ingress:
-      enabled: true
-      hosts:
-        - "host.com"
-      path: /

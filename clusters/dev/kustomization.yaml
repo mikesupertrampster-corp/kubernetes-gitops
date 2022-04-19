@@ -46,10 +46,10 @@ patches:
         path: /spec/values/datadog/clusterName
         value: dev
   - target:
-      version: v2beta1
-      kind: HelmRelease
+      version: v1
+      kind: Ingress
       name: grafana
     patch: |
       - op: replace
-        path: /spec/values/ingress/hosts/0
+        path: /spec/rules/0/host
         value: grafana.dev.mikesupertrampster.com
