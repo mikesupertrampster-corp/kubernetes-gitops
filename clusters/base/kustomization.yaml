@@ -8,4 +8,5 @@ resources:
   - istio
   - kiali
   - prometheus
+  - telemetry
   - demos/hello-world
