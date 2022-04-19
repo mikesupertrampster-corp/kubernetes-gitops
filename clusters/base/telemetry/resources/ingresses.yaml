@@ -16,3 +16,22 @@ spec:
                 name: grafana
                 port:
                   number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: loki
+  namespace: telemetry
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: host.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: loki
+                port:
+                  number: 80
