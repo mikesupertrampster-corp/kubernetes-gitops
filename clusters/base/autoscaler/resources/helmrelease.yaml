@@ -15,6 +15,7 @@ spec:
         name: autoscaler
         namespace: flux-system
   values:
+    awsRegion: eu-west-1
     autoDiscovery:
       clusterName: EKS
     rbac:
