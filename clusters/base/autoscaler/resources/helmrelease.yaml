@@ -14,11 +14,3 @@ spec:
         kind: HelmRepository
         name: autoscaler
         namespace: flux-system
-  values:
-    awsRegion: eu-west-1
-    autoDiscovery:
-      clusterName: EKS
-    rbac:
-      serviceAccount:
-        annotations:
-          "eks.amazonaws.com/role-arn": arn:aws:iam::639369124033:role/EKSClusterAutoscaler
