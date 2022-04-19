@@ -7,3 +7,4 @@ resources:
   - helm-repositories/kiali.yaml
   - helm-repositories/nginx.yaml
   - helm-repositories/opsmx.yaml
+  - helm-repositories/prometheus.yaml
