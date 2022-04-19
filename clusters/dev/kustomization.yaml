@@ -61,3 +61,11 @@ patches:
       - op: replace
         path: /spec/rules/0/host
         value: loki.dev.mikesupertrampster.com
+  - target:
+      version: v1
+      kind: Ingress
+      name: jaeger
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: tracing.dev.mikesupertrampster.com
