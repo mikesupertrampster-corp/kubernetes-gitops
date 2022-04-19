@@ -16,4 +16,13 @@ spec:
   values:
     external_services:
       prometheus:
-        url: "http://prometheus-server.prometheus.svc.cluster.local/"
+        url: http://prometheus-server.prometheus.svc.cluster.local
+      tracing:
+        enabled: false
+        in_cluster_url: http://tracing.telemetry.svc.cluster.local:16685/jaeger
+        use_grpc: true
+        url: https://tracing.dev.mikesupertrampster.com
+      grafana:
+        enabled: false
+        in_cluster_url: http://grafana.telemetry.svc.cluster.local
+        url: https://grafana.dev.mikesupertrampster.com
