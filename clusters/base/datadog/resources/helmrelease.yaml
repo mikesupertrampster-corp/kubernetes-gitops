@@ -37,8 +37,6 @@ spec:
         containerCollectAll: true
       networkMonitoring:
         enabled: true
-      orchestratorExplorer:
-        enabled: true
       processAgent:
         processCollection: true
       systemProbe:

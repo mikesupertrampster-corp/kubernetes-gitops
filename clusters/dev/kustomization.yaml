@@ -77,13 +77,13 @@ patches:
       - op: replace
         path: /spec/rules/0/host
         value: kubecost.dev.mikesupertrampster.com
-  - target:
-      version: v2beta1
-      kind: HelmRelease
-      name: datadog
-    patch: |
-      - op: add
-        path: /spec/values/datadog/env/-
-        value:
-          name: DD_NETWORK_ID
-          value: vpc-069b0688ce7e53cd2
+#  - target:
+#      version: v2beta1
+#      kind: HelmRelease
+#      name: datadog
+#    patch: |
+#      - op: add
+#        path: /spec/values/datadog/env/-
+#        value:
+#          name: DD_NETWORK_ID
+#          value: vpc-069b0688ce7e53cd2
