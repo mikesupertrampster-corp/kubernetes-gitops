@@ -2,7 +2,7 @@ name: Snyk Infrastructure as Code
 on: push
 jobs:
   snyk:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Run Snyk Scanning for security issues
