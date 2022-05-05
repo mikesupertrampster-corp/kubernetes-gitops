@@ -16,8 +16,22 @@ spec:
         namespace: flux-system
   values:
     datadog:
+      env:
+        - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
+          value: "true"
       apiKeyExistingSecret: datadog
       appKeyExistingSecret: datadog
       clusterName: EKS
       loglevel: WARN
       collectEvents: true
+      logs:
+        enabled: true
+        containerCollectAll: true
+      networkMonitoring:
+        enabled: true
+      orchestratorExplorer:
+        enabled: true
+      processAgent:
+        processCollection: true
+      systemProbe:
+        collectDNSStats: true
