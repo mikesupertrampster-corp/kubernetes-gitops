@@ -44,15 +44,3 @@ spec:
       systemProbe:
         collectDNSStats: true
       containerExcludeLogs: "name:kube-state-metrics name:cluster-autoscaler name:source-controller name:helm-controller name:loki name:controller name:agent"
-      agents:
-        volumeMounts:
-          - name: procdir
-            mountPath: /host/proc
-            readOnly: true
-          - name: cgroups
-            mountPath: /host/sys/fs/cgroup
-            readOnly: true
-          - name: debugfs
-            mountPath: /sys/kernel/debug
-          - name: sysprobe-socket-dir
-            mountPath: /var/run/sysprobe
