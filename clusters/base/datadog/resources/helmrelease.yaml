@@ -35,3 +35,4 @@ spec:
         processCollection: true
       systemProbe:
         collectDNSStats: true
+      containerExcludeLogs: "name:kube-state-metrics name:cluster-autoscaler name:source-controller name:helm-controller name:loki name:controller name:agent"
