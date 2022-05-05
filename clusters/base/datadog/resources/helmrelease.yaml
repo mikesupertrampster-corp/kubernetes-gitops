@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: datadog
-      version: 2.32.3
+      version: 2.33.0
       sourceRef:
         kind: HelmRepository
         name: datadog
@@ -19,6 +19,14 @@ spec:
       env:
         - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
           value: "true"
+        - name: DD_PROCESS_AGENT_ENABLED
+          value: 'true'
+        - name: DD_SYSTEM_PROBE_ENABLED
+          value: 'true'
+        - name: DD_SYSTEM_PROBE_EXTERNAL
+          value: 'true'
+        - name: DD_SYSPROBE_SOCKET
+          value: /var/run/sysprobe/sysprobe.sock
       apiKeyExistingSecret: datadog
       appKeyExistingSecret: datadog
       clusterName: EKS
@@ -36,3 +44,15 @@ spec:
       systemProbe:
         collectDNSStats: true
       containerExcludeLogs: "name:kube-state-metrics name:cluster-autoscaler name:source-controller name:helm-controller name:loki name:controller name:agent"
+      agents:
+        volumeMounts:
+          - name: procdir
+            mountPath: /host/proc
+            readOnly: true
+          - name: cgroups
+            mountPath: /host/sys/fs/cgroup
+            readOnly: true
+          - name: debugfs
+            mountPath: /sys/kernel/debug
+          - name: sysprobe-socket-dir
+            mountPath: /var/run/sysprobe
