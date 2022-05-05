@@ -70,6 +70,14 @@ patches:
         path: /spec/rules/0/host
         value: tracing.dev.mikesupertrampster.com
   - target:
+      version: v1
+      kind: Ingress
+      name: kubecost
+    patch: |
+      - op: replace
+        path: /spec/rules/0/host
+        value: kubecost.dev.mikesupertrampster.com
+  - target:
       version: v2beta1
       kind: HelmRelease
       name: datadog

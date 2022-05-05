@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kubecost
+  namespace: kubecost
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: cost-analyzer
+      version: 1.92.0
+      sourceRef:
+        kind: HelmRepository
+        name: kubecost
+        namespace: flux-system
+  values:
+    kubecostToken: "bWlrZXN1cGVydHJhbXBzdGVyQGdtYWlsLmNvbQ==xm343yadf98"
