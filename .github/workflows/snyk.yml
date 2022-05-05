@@ -1,5 +1,5 @@
 name: Snyk Infrastructure as Code
-on: pull_request
+on: push
 jobs:
   snyk:
     runs-on: self-hosted
