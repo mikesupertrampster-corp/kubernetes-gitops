@@ -19,14 +19,14 @@ spec:
       env:
         - name: DD_LOGS_CONFIG_K8S_CONTAINER_USE_FILE
           value: "true"
-        - name: DD_PROCESS_AGENT_ENABLED
-          value: 'true'
-        - name: DD_SYSTEM_PROBE_ENABLED
-          value: 'true'
-        - name: DD_SYSTEM_PROBE_EXTERNAL
-          value: 'true'
-        - name: DD_SYSPROBE_SOCKET
-          value: /var/run/sysprobe/sysprobe.sock
+#        - name: DD_PROCESS_AGENT_ENABLED
+#          value: 'true'
+#        - name: DD_SYSTEM_PROBE_ENABLED
+#          value: 'true'
+#        - name: DD_SYSTEM_PROBE_EXTERNAL
+#          value: 'true'
+#        - name: DD_SYSPROBE_SOCKET
+#          value: /var/run/sysprobe/sysprobe.sock
       apiKeyExistingSecret: datadog
       appKeyExistingSecret: datadog
       clusterName: EKS
@@ -37,8 +37,8 @@ spec:
         containerCollectAll: true
       networkMonitoring:
         enabled: true
-      processAgent:
-        processCollection: true
-      systemProbe:
-        collectDNSStats: true
+#      processAgent:
+#        processCollection: true
+#      systemProbe:
+#        collectDNSStats: true
       containerExcludeLogs: "name:kube-state-metrics name:cluster-autoscaler name:source-controller name:helm-controller name:loki name:controller name:agent"
