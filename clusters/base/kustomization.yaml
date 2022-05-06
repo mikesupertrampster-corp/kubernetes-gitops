@@ -7,7 +7,6 @@ resources:
   - ingress-nginx
   - istio
   - kiali
-  - kube-scan
   - kubecost
   - prometheus
   - telemetry
