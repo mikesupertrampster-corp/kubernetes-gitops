@@ -453,7 +453,7 @@ spec:
     spec:
       containers:
         - name: kube-scan-ui
-          image: octarinesec/kubescan-scanner-ui:20.5
+          image: didelotkev/kubescan-scanner-ui:20.5
           imagePullPolicy: Always
           env:
             - name: API_SERVER_PORT
@@ -463,7 +463,7 @@ spec:
             - name: WEBSITE_LINK
               value: "https://www.octarinesec.com"
         - name: kube-scan
-          image: octarinesec/kubescan-scanner:20.5
+          image: didelotkev/kubescan-scanner:20.5
           env:
             - name: KUBESCAN_PORT
               value: "80"
