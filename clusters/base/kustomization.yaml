@@ -4,7 +4,7 @@ resources:
   - autoscaler
 #  - datadog
   - flux
-#  - ingress-nginx
+  - ingress-nginx
 #  - istio
 #  - kiali
 #  - kube-hunter
