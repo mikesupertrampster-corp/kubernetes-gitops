@@ -9,6 +9,6 @@ resources:
 #  - kiali
 #  - kube-hunter
 #  - kubecost
-#  - prometheus
+  - prometheus
 #  - telemetry
   - demos/hello-world
