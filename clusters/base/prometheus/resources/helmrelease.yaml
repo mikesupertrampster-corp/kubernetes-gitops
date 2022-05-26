@@ -38,3 +38,7 @@ spec:
         kind: HelmRepository
         name: grafana
         namespace: flux-system
+  values:
+    grafana.ini:
+      auth.anonymous:
+        enabled: true
