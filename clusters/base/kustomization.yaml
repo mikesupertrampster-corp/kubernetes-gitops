@@ -11,4 +11,4 @@ resources:
 #  - kubecost
 #  - prometheus
 #  - telemetry
-#  - demos/hello-world
+  - demos/hello-world
