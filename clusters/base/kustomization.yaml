@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - autoscaler
 #  - datadog
-#  - flux
+  - flux
 #  - ingress-nginx
 #  - istio
 #  - kiali
