@@ -49,6 +49,6 @@ spec:
         datasources:
           - name: prometheus
             type: prometheus
-            url: "http://prometheus.prometheus.svc.cluster.local:9090"
+            url: http://prometheus-server.prometheus.svc.cluster.local
             access: proxy
             isDefault: true
