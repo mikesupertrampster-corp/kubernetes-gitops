@@ -9,6 +9,7 @@ resources:
 #  - kiali
 #  - kube-hunter
 #  - kubecost
+  - kur8
   - prometheus
 #  - telemetry
   - demos/hello-world
