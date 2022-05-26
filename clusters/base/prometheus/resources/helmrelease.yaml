@@ -43,3 +43,12 @@ spec:
       auth.anonymous:
         enabled: true
         org_role: Admin
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+          - name: prometheus
+            type: prometheus
+            url: "http://prometheus.prometheus.svc.cluster.local:9090"
+            access: proxy
+            isDefault: true
