@@ -16,3 +16,5 @@ spec:
       containers:
         - name: kur8
           image: kur8/dashboard:latest
+          ports:
+            - containerPort: 3068
