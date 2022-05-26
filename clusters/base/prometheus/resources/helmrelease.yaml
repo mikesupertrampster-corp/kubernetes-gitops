@@ -52,3 +52,8 @@ spec:
             url: http://prometheus-server.prometheus.svc.cluster.local
             access: proxy
             isDefault: true
+    dashboards:
+      default:
+        node-exporter-full:
+          url: https://raw.githubusercontent.com/rfrail3/grafana-dashboards/master/prometheus/node-exporter-full.json
+          token: ''
