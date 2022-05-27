@@ -5,7 +5,7 @@ resources:
 #  - datadog
   - flux
   - ingress-nginx
-#  - istio
+  - istio
 #  - kiali
 #  - kube-hunter
 #  - kubecost
