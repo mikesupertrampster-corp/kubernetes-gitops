@@ -12,3 +12,4 @@ resources:
   - prometheus
 #  - telemetry
   - demos/hello-world
+  - demos/book-info
