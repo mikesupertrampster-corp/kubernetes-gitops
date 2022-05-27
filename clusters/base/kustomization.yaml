@@ -6,7 +6,7 @@ resources:
   - flux
   - ingress-nginx
   - istio
-#  - kiali
+  - kiali
 #  - kube-hunter
 #  - kubecost
   - prometheus
